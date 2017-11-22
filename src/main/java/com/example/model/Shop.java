@@ -3,18 +3,18 @@ package com.example.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="Shops")
+@Document(collection="shops")
 public class Shop {
 	@Id
-	int _id;
-	String picture;
-	String name;
-	String email;
-	String city;
-	Point location;        //Point defined in our application, not the one that exists in Java
+	private String _id;
+	private String picture;
+	private String name;
+	private String email;
+	private String city;
+	private Point location;        //Point defined in our application, not the one that exists in Java
 			
 	//Constructor
-	public Shop(int _id, String picture, String name, String email, String city, Point location) {
+	public Shop(String _id, String picture, String name, String email, String city, Point location) {
 		super();
 		this._id = _id;
 		this.picture = picture;
@@ -25,10 +25,10 @@ public class Shop {
 	}
 	
 	//getters and setters
-	public int get_id() {
+	public String get_id() {
 		return _id;
 	}
-	public void set_id(int _id) {
+	public void set_id(String _id) {
 		this._id = _id;
 	}
 	public String getPicture() {

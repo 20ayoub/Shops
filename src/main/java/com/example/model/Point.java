@@ -1,28 +1,30 @@
 package com.example.model;
 
 public class Point {
-	double x;
-	double y;
+	Double x;
+	Double y;
 	
 	//Constructor
-	public Point(double x, double y) {
+	public Point(Double x, Double y) {
 		super();
 		this.x = x;
 		this.y = y;
 	}
 	
 	
+	
+	
 	//getters and setters
-	public double getX() {
+	public Double getX() {
 		return x;
 	}
-	public void setX(double x) {
+	public void setX(Double x) {
 		this.x = x;
 	}
-	public double getY() {
+	public Double getY() {
 		return y;
 	}
-	public void setY(double y) {
+	public void setY(Double y) {
 		this.y = y;
 	}
 	
