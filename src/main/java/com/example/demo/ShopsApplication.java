@@ -1,13 +1,21 @@
 package com.example.demo;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+import com.example.model.Shop;
+import com.example.mongoRepository.ShopsRepository;
 
 
 @SpringBootApplication
 @EnableMongoRepositories(basePackages = {"com.example.mongoRepository"})
+@ComponentScan(basePackages = "com.example.controller.Control.class" )
+
 public class ShopsApplication /* implements CommandLineRunner */ {
 
 /*	@Autowired
@@ -17,7 +25,7 @@ public class ShopsApplication /* implements CommandLineRunner */ {
 		SpringApplication.run(ShopsApplication.class, args);
 	}
 
-	/*@Override
+/*	@Override
 	public void run(String... arg0) throws Exception {
 		// find all simple document in DB
 		// fetch all customers
